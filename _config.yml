@@ -1,4 +1,4 @@
-title: Parchment
+title: Carol Fontana
 author: pro-panda
 subtitle: The life of a frustrated engineer
 
@@ -18,7 +18,7 @@ sass:
     sass_dir: css
 
 navbar:
- - name: "About"
-   link: "about"
- - name: "Resume"
-   absolute-link: "https://rahulbothra.com/cv.pdf"
+ - name: "About"   
+   absolute-link: "https://github.com/caroldacfontana"
+ - name: "Resume/CV"
+   absolute-link: "https://caroldacfontana.github.io/cv/"
