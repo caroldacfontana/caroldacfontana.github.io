@@ -3,10 +3,10 @@ author: pro-panda
 subtitle: The life of a frustrated engineer
 
 url: "https://caroldacfontana.github.io"
-baseurl: "/blog"
+baseurl: "/"
 
 footer_only_homepage: true
-footer_url: "https://caroldacfontana.github.io/blog/"
+footer_url: "https://caroldacfontana.github.io/"
 footer_text: "Theme by rhl-bthr"
 
 profile-picture: assets/profile.png
