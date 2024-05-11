@@ -18,6 +18,8 @@ sass:
     sass_dir: css
 
 navbar:
+ - name: "About"   
+   link: "about"
  - name: "My Github"   
    absolute-link: "https://github.com/caroldacfontana"
  - name: "Resume-CV"
