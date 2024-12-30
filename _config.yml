@@ -22,4 +22,6 @@ navbar:
    link: "about"
  - name: "My Github"   
    absolute-link: "https://github.com/caroldacfontana"
+ - name: "My Linkedin"   
+   absolute-link: "https://www.linkedin.com/in/carol-fontana-0a2b571ba/"
 
