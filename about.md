@@ -11,4 +11,4 @@ Hi there! I'm Carol. I'm a DBA and I've been working on IT for less than 2 years
 To motive myself to study and share knowledge 
 
 ### Contact Me on Linkedin!
-[https://www.linkedin.com/in/carol-fontana-0a2b571ba/](url)
+[Linkedin Profile](https://www.linkedin.com/in/carol-fontana-0a2b571ba)
