@@ -59,12 +59,15 @@ sudo apt update && sudo apt install vagrant
 ```
 
 Double check if Vagrant is installed. 
-`
+
+```sh
 vagrant --version
-`
-`
+```
+or
+
+```sh
 dpkg -l | grep vagrant
-`
+```
 
 3. **Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from [title](https://portal.cloud.hashicorp.com/vagrant/discover) 
    I chose Oracle Linux 8 from developer Tim Hall** 
