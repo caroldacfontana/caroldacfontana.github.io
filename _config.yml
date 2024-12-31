@@ -25,3 +25,10 @@ navbar:
  - name: "My Linkedin"   
    absolute-link: "https://www.linkedin.com/in/carol-fontana-0a2b571ba/"
 
+markdown: kramdown
+highlighter: rouge
+theme: minima # or any theme you're using
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    inline_theme: github
