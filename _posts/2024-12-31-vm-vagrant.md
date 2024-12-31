@@ -165,9 +165,9 @@ vagrant ssh
 
 ### Note: by default, user vagrant's password is vagrant. 
 
-Now once connected to the VM you can change the password for your users, including root.
+Now once connected to the VM you can change the password of your users, including root.
 
-**7. If you want to destroy your VM, just use the "destroy" command. Make sure**
+**7. If you want to destroy your VM, just use the "destroy" command.**
 
 ```bash
 vagrant destroy -f
