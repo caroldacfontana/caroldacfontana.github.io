@@ -51,46 +51,48 @@ It's used to specify the operating system, resources (CPU, RAM), and the base bo
 
 I use Linux Mint on my personal machine, and since its an Ubuntu distro, I used this command to download/install it.
 
-```sh
+```bash
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-| sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+
 sudo apt update && sudo apt install vagrant
 ```
 
 Double check if Vagrant is installed. 
 
-```sh
+```bash
 vagrant --version
 ```
 or
 
-```sh
+```bash
 dpkg -l | grep vagrant
 ```
 
 **3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from [title](https://portal.cloud.hashicorp.com/vagrant/discover) 
    I chose Oracle Linux 8 from developer Tim Hall**
    
-```sh
+```bash
 vagrant box add oraclebase/oracle-8 --provider virtualbox
 ```
 
 To check all Vagrant boxes in your machine, try:
 
-```
+```bash
 vagrant box list
 ```
 
 If you want to remove your Vagrant box, use this command:
 
-```
+```bash
 vagrant box remove oraclebase/oracle-8
 ```
 
 You can also download it directly from Oracle's official repository
 
-```
+```bash
 vagrant box add --name ol8 https://yum.oracle.com/boxes/oraclelinux/ol8/ol8.box
 ```
 
@@ -99,7 +101,7 @@ Example: I chose path /home/carol/Documents/ORACLE/19c/IAC/Vagrant**
 
 Once you're in the right directory, start your Vagrantfile.
 
-```
+```bash
 vagrant init
 ```
 
@@ -118,8 +120,9 @@ I had to look up Vagrant documentation to work around that issue:
 
 Also, this code includes making the VM's IP static, so it doesn't change when rebooted.
 
-The result is this:
-```
+This is the result:
+
+```bash
 Vagrant.configure("2") do |config|
   # Define the base box
   config.vm.box = "oraclebase/oracle-8"
@@ -147,7 +150,7 @@ Now save that recipe into your Vagrantfile and exit.
 
 **5. Now that we've got the recipe going, let's bring that VM up.**
 
-```
+```bash
 vagrant up
 ```
 
@@ -156,7 +159,7 @@ You will notice that just with that command alone, the VM will spin up.
 
 **6. Access your VM through command line**
 
-```
+```bash
 vagrant ssh
 ```
 ![](../assets/picture_3.png)
@@ -167,7 +170,7 @@ Now once connected to the VM you can change the password for your users, includi
 
 **7. If you want to destroy your VM, just use the "destroy" command. Make sure**
 
-```
+```bash
 vagrant destroy -f
 ```
 
