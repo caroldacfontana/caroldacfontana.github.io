@@ -40,18 +40,21 @@ It's used to specify the operating system, resources (CPU, RAM), and the base bo
 ---
 
 1. **Download Oracle VM VirtualBox and install it on your local machine. You can choose from various types of OS.**
-[Oracle VM download page](https://www.virtualbox.org/wiki/Downloads)
+
+[CLICK HERE to download Oracle VM](https://www.virtualbox.org/wiki/Downloads)
 
 2. **Download and install Vagrant on your machine.**
-[title](https://developer.hashicorp.com/vagrant/install#linux)
+
+[CLICK HERE to download Vagrant](https://developer.hashicorp.com/vagrant/install#linux)
 
 
 I use Linux Mint on my personal machine, and since its an Ubuntu distro, I used this command to download/install it.
-`
+
+```
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install vagrant
-`
+```
 
 Double check if Vagrant is installed. 
 `
