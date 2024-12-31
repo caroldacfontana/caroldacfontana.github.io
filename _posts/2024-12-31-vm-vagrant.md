@@ -48,7 +48,7 @@ It's used to specify the operating system, resources (CPU, RAM), and the base bo
 [CLICK HERE to download Vagrant](https://developer.hashicorp.com/vagrant/install#linux)
 
 
-I use Linux Mint on my personal machine, and since its an Ubuntu distro, I used this command to download/install it.
+I use Linux Mint on my personal machine, and since its an Ubuntu distro, I used these commands to download/install it.
 
 ```bash
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
