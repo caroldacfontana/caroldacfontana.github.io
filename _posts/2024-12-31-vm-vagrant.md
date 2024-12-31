@@ -104,7 +104,7 @@ vagrant init
 ```
 
 If you list it, you can see that a Vagrantfile was created. *Do not rename it.*
-![](../assets/picture_1.jpg)
+![](../assets/picture_1.png)
 
 Open the file. You will notice that it comes with a bunch of instructions for a "recipe" by default. 
 
@@ -156,14 +156,14 @@ vagrant up
 ```
 
 You will notice that just with that command alone, the VM will spin up.
-![](../assets/picture_2.jpg)
+![](../assets/picture_2.png)
 
 **6. Access your VM through command line**
 
 ```
 vagrant ssh
 ```
-![](../assets/picture_3.jpg)
+![](../assets/picture_3.png)
 
 ### Note: by default, user vagrant's password is vagrant. 
 
