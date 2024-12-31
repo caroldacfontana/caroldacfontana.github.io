@@ -40,11 +40,11 @@ It's used to specify the operating system, resources (CPU, RAM), and the base bo
 
 ---
 
-1. **Download Oracle VM VirtualBox and install it on your local machine. You can choose from various types of OS.**
+**1. Download Oracle VM VirtualBox and install it on your local machine. You can choose from various types of OS.**
 
 [CLICK HERE to download Oracle VM](https://www.virtualbox.org/wiki/Downloads)
 
-2. **Download and install Vagrant on your machine.**
+**2. Download and install Vagrant on your machine.**
 
 [CLICK HERE to download Vagrant](https://developer.hashicorp.com/vagrant/install#linux)
 
@@ -69,34 +69,39 @@ or
 dpkg -l | grep vagrant
 ```
 
-3. **Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from [title](https://portal.cloud.hashicorp.com/vagrant/discover) 
-   I chose Oracle Linux 8 from developer Tim Hall** 
-`
+**3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from [title](https://portal.cloud.hashicorp.com/vagrant/discover) 
+   I chose Oracle Linux 8 from developer Tim Hall**
+   
+```sh
 vagrant box add oraclebase/oracle-8 --provider virtualbox
-`
+```
 
 To check all Vagrant boxes in your machine, try:
-`
+
+```
 vagrant box list
-`
+```
 
 If you want to remove your Vagrant box, use this command:
-`
+
+```
 vagrant box remove oraclebase/oracle-8
-`
+```
 
 You can also download it directly from Oracle's official repository
-`
-vagrant box add --name ol8 https://yum.oracle.com/boxes/oraclelinux/ol8/ol8.box
-`
 
-4. **Let's work on our Vagrantfile now. Choose a directory for your Vagrantfile in your local machine. Navegate to the directory chosen by you through command line. 
+```
+vagrant box add --name ol8 https://yum.oracle.com/boxes/oraclelinux/ol8/ol8.box
+```
+
+**4. Let's work on our Vagrantfile now. Choose a directory for your Vagrantfile in your local machine. Navegate to the directory chosen by you through command line. 
 Example: I chose path /home/carol/Documents/ORACLE/19c/IAC/Vagrant**
 
 Once you're in the right directory, start your Vagrantfile.
-`
+
+```
 vagrant init
-`
+```
 
 If you list it, you can see that a Vagrantfile was created. *Do not rename it.*
 ![](../assets/picture_1.jpg)
@@ -108,13 +113,13 @@ In my case,  to make it simple, I just asked chat gpt to help me with a recipe f
 It wasn't working well, because it gave me a wrong line of code regarding storage destination. 
 
 I had to look up Vagrant documentation to work around that issue:
-[title](https://developer.hashicorp.com/vagrant/docs/disks/usage)
 
+[CLICK HERE to see Vagrant's Documentation](https://developer.hashicorp.com/vagrant/docs/disks/usage)
 
 Also, this code includes making the VM's IP static, so it doesn't change when rebooted.
 
 The result is this:
-`
+```
 Vagrant.configure("2") do |config|
   # Define the base box
   config.vm.box = "oraclebase/oracle-8"
@@ -140,34 +145,36 @@ Vagrant.configure("2") do |config|
     echo "Oracle Linux 8 VM setup complete."
   SHELL
 end
-`
+```
 
 Now save that recipe into your Vagrantfile and exit. 
 
-5. **Now that we've got the recipe going, let's bring that VM up.**
+**5. Now that we've got the recipe going, let's bring that VM up.**
 
-`
+```
 vagrant up
-`
+```
 
 You will notice that just with that command alone, the VM will spin up.
 ![](../assets/picture_2.jpg)
 
-6. **Access your VM through command line**
-`
+**6. Access your VM through command line**
+
+```
 vagrant ssh
-`
+```
 ![](../assets/picture_3.jpg)
 
-> Note: by default, user vagrant's password is vagrant. 
+### Note: by default, user vagrant's password is vagrant. 
 
 Now once connected to the VM you can change the password for your users, including root.
 
-7. **If you want to destroy your VM, just use the "destroy" command. Make sure**
-`
+**7. If you want to destroy your VM, just use the "destroy" command. Make sure**
+
+```
 vagrant destroy -f
-`
+```
 
 ### Hope you find this tutorial helpful! See ya.
 
-***
+---
