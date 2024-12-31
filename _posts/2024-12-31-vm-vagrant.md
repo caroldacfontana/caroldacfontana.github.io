@@ -13,8 +13,7 @@ tags: [IAC, VM, Vagrant]
 
 ---
 
-### Note: In terms of network interface, instead of NAT, I used BRIDGE.
-
+#### Note: In terms of network interface, instead of NAT, I used BRIDGE.
 
 ---
 
