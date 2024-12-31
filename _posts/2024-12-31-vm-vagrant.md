@@ -13,23 +13,27 @@ tags: [IAC, VM, Vagrant]
 
 ---
 
-> Note: In terms of network, I did not use NAT in this tutorial. I used BRIDGE instead.
+### Note: In terms of network interface, I did not use NAT in this tutorial. I used BRIDGE instead.
 
 ---
 
-*What is Vagrant?*
+***What is Vagrant?***
+
 *Vagrant is an open-source tool for building and managing virtualized development environments. It simplifies the setup of consistent and reproducible environments for developers by using lightweight, portable, and customizable configurations. With Vagrant, you can define the entire environment (e.g., operating system, software, network) in a single file called a "Vagrantfile".*
 
-*Why use Vagrant?*
+***Why use Vagrant?***
+
 - *Consistency*: *Avoid "it works on my machine" issues by sharing the same environment across all team members.*
 - *Simplicity: Quickly spin up virtual machines with a single command.*
 - *Portability: Easily share configurations for development environments.*
 - *Flexibility: Supports multiple providers like VirtualBox, Docker, and AWS.*
 
-*What is a Vagrant Box?*
+***What is a Vagrant Box?***
+
 *A Vagrant box is a prepackaged environment that contains a complete operating system image and necessary configuration for Vagrant. It's like a template that Vagrant uses to create and provision virtual machines quickly.*
 
-*What is a Vagrantfile?*
+***What is a Vagrantfile?***
+
 *A Vagrantfile is a configuration file used by Vagrant to define the settings and behavior of a virtual machine (VM). It is written in Ruby, but you don't need to know Ruby to use it (Vagrantfiles are designed to be simple and human-readable).
 It's used to specify the operating system, resources (CPU, RAM), and the base box (template VM) to use. Also to automate software installation, configure network, etc.*
 
