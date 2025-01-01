@@ -31,5 +31,6 @@ theme: minima
 kramdown:
   input: GFM
   syntax_highlighter_opts:
-    inline_theme: base16.dark
-    line_numbers: false # Set to true for line numbers
+    inline_theme: github
+    line_numbers: false
+
