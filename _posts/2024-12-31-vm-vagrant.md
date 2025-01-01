@@ -67,10 +67,10 @@ or
 dpkg -l | grep vagrant
 ```
 
-**3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from this website: 
+**3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from this website:**
 [CLICK HERE to go to Vagrant Hub](https://portal.cloud.hashicorp.com/vagrant/discover) 
 
-What you'll do is go to that website, chose an image, and use the command below to add it to your vagrant boxes. I chose Oracle Linux 8 from developer Tim Hall**
+**What you'll do is go to that website, chose an image, and use the command below to add it to your vagrant boxes. I chose Oracle Linux 8 from developer Tim Hall**
    
 ```bash
 vagrant box add oraclebase/oracle-8 --provider virtualbox
