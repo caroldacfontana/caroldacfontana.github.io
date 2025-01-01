@@ -6,7 +6,7 @@ tags: [IAC, VM, Vagrant]
 ---
 
 <div style="text-align: center;">
-   ![](../assets/vm_vagrant.gif)
+  <img src="../assets/vm_vagrant.gif" alt="Provisioning a VM with Vagrant">
 </div>
 
 ---
