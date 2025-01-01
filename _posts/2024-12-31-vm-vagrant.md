@@ -70,8 +70,10 @@ or
 dpkg -l | grep vagrant
 ```
 
-**3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from [title](https://portal.cloud.hashicorp.com/vagrant/discover) 
-   I chose Oracle Linux 8 from developer Tim Hall**
+**3. Download a Vagrant Box. Instead of building my own Vagrant Box, in this case I just pulled a box from this website: 
+[CLICK HERE to go to Vagrant Hub](https://portal.cloud.hashicorp.com/vagrant/discover) 
+
+What you'll do is go to that website, chose an image, and use the command below to add it to your vagrant boxes. I chose Oracle Linux 8 from developer Tim Hall**
    
 ```bash
 vagrant box add oraclebase/oracle-8 --provider virtualbox
@@ -114,10 +116,9 @@ In my case,  to make it simple, I just asked chat gpt to help me with a recipe f
 It wasn't working well, because it gave me a wrong line of code regarding storage destination. 
 
 I had to look up Vagrant documentation to work around that issue:
-
 [CLICK HERE to see Vagrant's Documentation](https://developer.hashicorp.com/vagrant/docs/disks/usage)
 
-Also, this code includes making the VM's IP static, so it doesn't change when rebooted.
+The code below includes making the VM's IP static.
 
 This is the result:
 
