@@ -5,7 +5,9 @@ subtitle: This post explains how to spin up a VM using Vagrant
 tags: [IAC, VM, Vagrant]
 ---
 
-![](../assets/vm_vagrant.gif)
+<div style="text-align: center;">
+   ![](../assets/vm_vagrant.gif)
+</div>
 
 ---
 
