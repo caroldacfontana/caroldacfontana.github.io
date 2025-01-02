@@ -128,15 +128,19 @@ Vagrant.configure("2") do |config|
   # Define the base box
   config.vm.box = "oraclebase/oracle-8"
   # Set the VM storage config
-  config.vm.disk :disk, size: "60GB
+  config.vm.disk :disk, size: "60GB"
+
   # Configure the VM settings
   config.vm.provider "virtualbox" do |vb|
     vb.name = "OracleLinux8_VM"
     vb.cpus = 2
     vb.memory = 4096
+
   end
+
   # Configure the network to use a bridged adapter
   config.vm.network "public_network", bridge: "wlp1s0" 
+
   # Provisioning can be added here if needed
   config.vm.provision "shell", inline: <<-SHELL
     sed -i 's/dhcp/static/' /etc/sysconfig/network-scripts/ifcfg-eth1
