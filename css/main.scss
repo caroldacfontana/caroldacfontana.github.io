@@ -60,7 +60,7 @@ code {
 .highlight .function,
 .highlight .class {
     background-color: transparent !important; /* Remove white background */
-    color: #D3D3D3 /* Use the parent code block's text color */
+    color: #D3D3D3 !important; /* Use the parent code block's text color */
 }
 
 
