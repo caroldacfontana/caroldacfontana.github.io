@@ -31,6 +31,5 @@ theme: minima
 kramdown:
   input: GFM
   syntax_highlighter_opts:
-    inline_theme: github
+    inline_theme: monokai
     line_numbers: false
-
