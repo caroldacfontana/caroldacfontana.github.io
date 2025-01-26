@@ -37,28 +37,17 @@ code {
 
 /* Add styles for code blocks */
 .highlight pre {
-    background-color: #282c34; /* Dark GitHub-style background */
-    color: #abb2bf; /* Lighter text color for readability */
-    border: 1px solid #444c56; /* Subtle border */
-    padding: 10px;
-    border-radius: 6px;
-    overflow-x: auto; /* Allows horizontal scrolling for long lines */
+    background-color: #424242; /* Light gray background for readability */
+    color: #D3D3D3; /* Darker text color */
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px; /* Space inside the code block */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Horizontal scrolling for long lines */
     font-family: "Courier New", Courier, monospace; /* Monospace font */
-    font-size: 14px;
-    line-height: 1.5;
 }
-
 
 .highlight {
     margin: 15px 0; /* Add spacing above and below code blocks */
-.highlight .keyword { color: #c678dd; } /* Purple for keywords */
-.highlight .string { color: #98c379; } /* Green for strings */
-.highlight .number { color: #d19a66; } /* Orange for numbers */
-.highlight .comment { color: #5c6370; font-style: italic; } /* Grey italic for comments */
-.highlight .function { color: #61afef; } /* Blue for function names */
-.highlight .class { color: #e5c07b; } /* Yellow for class names */
-.highlight .variable { color: #e06c75; } /* Red for variables */
-
 }
 
 // divs
