@@ -38,43 +38,17 @@ code {
 /* Add styles for code blocks */
 /* Update the overall code block style */
 .highlight pre {
-    background-color: transparent; /* No background */
-    color: #abb2bf; /* Keep the text color */
-    border: none; /* Remove the border for a cleaner look */
-    padding: 10px; /* Optional: Keep padding for readability */
-    border-radius: 0; /* No rounded corners */
-    overflow-x: auto; /* Enable horizontal scrolling for long lines */
-    font-family: "Courier New", Courier, monospace; /* Monospace font for code */
-    font-size: 14px; /* Adjust font size */
-    line-height: 1.5; /* Better spacing between lines */
+    background-color: #424242; /* Light gray background for readability */
+    color: #D3D3D3; /* Darker text color */
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px; /* Space inside the code block */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Horizontal scrolling for long lines */
+    font-family: "Courier New", Courier, monospace; /* Monospace font */
 }
 
-/* Style for variables and placeholders */
-.highlight .variable {
-    color: #e06c75; /* Red for variables */
-    background-color: transparent; /* No background color */
-}
-
-/* Additional syntax styles */
-.highlight .string {
-    color: #98c379; /* Green for strings */
-}
-.highlight .keyword {
-    color: #c678dd; /* Purple for keywords */
-    background-color: transparent; /* No background color */	
-}
-.highlight .comment {
-    color: #5c6370; /* Grey for comments */
-    font-style: italic; /* Italicize comments */
-}
-.highlight .number {
-    color: #d19a66; /* Orange for numbers */
-}
-.highlight .function {
-    color: #61afef; /* Blue for function names */
-}
-.highlight .class {
-    color: #e5c07b; /* Yellow for class names */
+.highlight {
+    margin: 15px 0; /* Add spacing above and below code blocks */
 }
 
 
