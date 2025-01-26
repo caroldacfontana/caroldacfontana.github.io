@@ -6,7 +6,7 @@ tags: [API, Oracle 19c, Python, GCP]
 ---
 
 <div style="text-align: center;">
-  <img src="../assets/vm_vagrant.gif" alt="Provisioning a VM with Vagrant">
+  <img src="../assets/python_oracle.gif" alt="Provisioning a VM with Vagrant">
 </div>
 
 ---
@@ -26,10 +26,6 @@ tags: [API, Oracle 19c, Python, GCP]
 #### PS: I use Linux Mint on my personal computer, so this is a Linux tutorial.
 
 ---
-
-[CLICK HERE to download Oracle VM](https://www.virtualbox.org/wiki/Downloads)
-
-![](../assets/picture_1.png)
 
 **1. Check listener.ora in your Oracle database that's installed in your VM. Make sure the listener is active and configured to accept remote connections.**
 
@@ -135,7 +131,7 @@ finally:
 ```
 
 Output:
-
+![](../assets/output_connection.png)
 
 
 **11. Now let's try writing querying the database for some grants regarding a specific user, and see if python will write it down on a csv file in our project directory.**
@@ -213,9 +209,10 @@ finally:
 ```
 
 output:
+![](../assets/csv_try.png)
 
 CSV file written locally:
-
+![](../assets/csv_locally.png)
 
 **12. Now let's write this csv in our Google Drive account. I didn't want to mess with Google's API on this case, and instead, to make it easier, I'm just using a lib called gspread that facilitates me to use Google Sheets specifically.** 
 
@@ -328,14 +325,12 @@ finally:
 ```
 
 output:
-
+![](../assets/api_connection.png)
 
 Now let's check our google drive under "Shared with me" and check to see if our Google Sheet file is there
-
-
+![](../assets/csv_in_google_drive.png)
 
 tadaaaa  it worked :)
-
 
 ### I hope you find this tutorial helpful, and that it encourages you to automate as many tasks as you can!!
 ---
