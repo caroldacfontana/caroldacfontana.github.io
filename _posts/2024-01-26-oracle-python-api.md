@@ -25,6 +25,8 @@ tags: [API, Oracle 19c, Python, GCP]
 
 #### PS: I use Linux Mint on my personal computer, so this is a Linux tutorial.
 
+#### Get all codes from this project on my [GitHub](https://github.com/caroldacfontana/python_oracle_googlesheets_project)
+
 ---
 
 **1. Check listener.ora in your Oracle database that's installed in your VM. Make sure the listener is active and configured to accept remote connections.**
