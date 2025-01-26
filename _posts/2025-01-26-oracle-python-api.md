@@ -29,9 +29,9 @@ tags: [API, Oracle 19c, Python, GCP]
 
 ---
 
-**1. Check listener.ora in your Oracle database that's installed in your VM. Make sure the listener is active and configured to accept remote connections.**
+**1. Check the info on your oracle's listener.ora. Make sure the listener is active and configured to accept remote connections.**
 
-**2. Check your tnsnames.ora and make sure it is also configured correctly. Make sure Oracle's SID and service name are correct.Also, make sure to disable your VM's firewall and SELINUX so you can access the database externally. That shouldn't be a problem hence the fact that this is a home lab.**
+**2. Check your tnsnames.ora and make sure it is also configured correctly. Make sure Oracle's SID and service name are correct. Also, if possible, disable your firewall and SELINUX so you can access the database externally. That shouldn't be a problem hence the fact that this is a home lab (I used an Oracle 19c in a local VM.**
 
 disable SELINUX
 ~~~bash
@@ -44,7 +44,7 @@ systemctl stop firewalld
 systemctl disable firewalld
 ```
 
-**3. Let's now install venv in order to create an isolated environment for this activity. (PS: You can also use docker if you prefer!)Make sure you choose a specific directory for your project before installing venv, since it will have to be installed on that directory!**
+**3. Let's now install venv in order to create an isolated environment for this activity in our machine (locally). (PS: You can also use docker if you prefer!) Make sure you choose a specific directory for your project before installing venv, since it will have to be installed on that directory!**
 
 ex: 
 /home/carol/python_oracle
@@ -77,7 +77,7 @@ export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
 
 **7.Now, on your chosen project's directory, try seeing if Oracle Client is working with cx_Oracle lib.**
 
-#### BIG PS: DON'T FORGET TO RUN VENV LOCALLY, OTHERWISE, NONE OF THE LIBS YOU'VE INSTALLED WILL WORK!!!
+#### BIG PS: DON'T FORGET TO RUN VENV LOCALLY, OTHERWISE, NONE OF THE LIBS YOU'VE INSTALLED WITH VENV WILL WORK!!!
 
 ```bash
 . venv/bin/activate
@@ -89,9 +89,9 @@ import cx_Oracle
 print(cx_Oracle.clientversion())
 ```
 
-**8. Before trying to connect to the database, make sure to go to /etc/hosts in your machine, and point out the dns for your VM's ip, so it matches the information on both Oracle listener and tnsnames.**
+**8. Before trying to connect to the database, make sure to go to /etc/hosts in your machine, and point out the dns for your database server, so it matches the information on both Oracle listener and tnsnames.**
 
-**9. Now we are all set to try to connect to our database using Python. Make sure to use the correct info using the command below**
+**9. Now we are all set to try to connect to our database using Python. Make sure to use the correct info using the code below**
 
 from your machine, run python, and then this command
 ```python
@@ -136,7 +136,7 @@ Output:
 ![](../assets/output_connection.png)
 
 
-**11. Now let's try writing querying the database for some grants regarding a specific user, and see if python will write it down on a csv file in our project directory.**
+**11. Now let's try querying the database for some grants regarding a specific user, and see if python will write it down on a csv file in our project directory locally.**
 
 ```python
 import cx_Oracle
@@ -216,7 +216,7 @@ output:
 CSV file written locally:
 ![](../assets/csv_locally.png)
 
-**12. Now let's write this csv in our Google Drive account. I didn't want to mess with Google's API on this case, and instead, to make it easier, I'm just using a lib called gspread that facilitates me to use Google Sheets specifically.** 
+**12. Now let's write this csv in our Google Drive account. I didn't want to mess with Google's API directly, and instead, to make it easier, I'm just using a lib called gspread that facilitates me to use Google Sheets specifically.** 
 
 So first, you're gonna need to log on to Google Cloud Console. 
 
@@ -237,7 +237,7 @@ Now that you have your Service Account, let's create a key
 - go to "KEYS" > "ADD KEY" > "Create New Key" > select "JSON" and hit create
 - this key will be downloaded to your pc
 
-Now you can use the chat gpt generated code below, and just change these important information:
+Now you can use the chat gpt generated code below, but make sure to change these important informations:
 
 - the python variables to connect to your database
 - the user in your SQL query
