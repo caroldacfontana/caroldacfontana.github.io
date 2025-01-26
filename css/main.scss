@@ -38,11 +38,11 @@ code {
 /* Add styles for code blocks */
 /* Update the overall code block style */
 .highlight pre {
-    background-color: #282c34; /* Dark background for better readability */
-    color: #abb2bf; /* Light text color */
-    border: 1px solid #444c56; /* Subtle border for contrast */
-    padding: 10px; /* Spacing inside the code block */
-    border-radius: 6px; /* Rounded corners */
+    background-color: transparent; /* No background */
+    color: #abb2bf; /* Keep the text color */
+    border: none; /* Remove the border for a cleaner look */
+    padding: 10px; /* Optional: Keep padding for readability */
+    border-radius: 0; /* No rounded corners */
     overflow-x: auto; /* Enable horizontal scrolling for long lines */
     font-family: "Courier New", Courier, monospace; /* Monospace font for code */
     font-size: 14px; /* Adjust font size */
@@ -61,6 +61,7 @@ code {
 }
 .highlight .keyword {
     color: #c678dd; /* Purple for keywords */
+    background-color: transparent; /* No background color */	
 }
 .highlight .comment {
     color: #5c6370; /* Grey for comments */
