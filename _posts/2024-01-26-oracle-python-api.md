@@ -12,8 +12,8 @@ tags: [API, Oracle 19c, Python, GCP]
 ---
 
 **Requirements:**
-- An Oracle 19c database installed in a VM 
-- Install venv on your local machine
+- An Oracle 19c database 
+- Install venv
 - Install Python 
 - Install Oracle Instant Client 
 - To have an account at google GCP (NO PAYMENTS REQUIRED!!)
