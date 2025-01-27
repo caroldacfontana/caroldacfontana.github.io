@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrating Oracle 19c with Google Sheets
-subtitle: This post explains how to write a Google Sheet file in Google Drive from querying information in an Oracle database
+subtitle: This post explains how to write a Google Sheet file in Google Drive from querying information in an Oracle database using Python
 tags: [API, Oracle 19c, Python, GCP]
 ---
 
